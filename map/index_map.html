@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 
     <link href="nav.css" rel="stylesheet" type="text/css" />
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="bigSlide.min.js"></script>
 </head>
@@ -22,12 +22,14 @@
 <body>
 
     <nav id="menu" class="panel" role="navigation">
+        <img src="../Grafiken/logo_min.png" class="logo">
+        <img src="../Grafiken/img_avatar.png" alt="Avatar" class="avatar"><br><br><span style="position: relative; color: #64a39f; font-weight: bold; left: 30%;">Klara Fischer</span>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">The Ballad of El Goodo</a></li>
-            <li><a href="#">Thirteen</a></li>
-            <li><a href="#">September Gurls</a></li>
-            <li><a href="#">What's Going Ahn</a></li>
+            <li><a href="#"><img src="../Grafiken/orte.png" class="nav_logos"><span class="list_text">&nbsp;Orte</span></a></li>
+            <li><a href="#"><img src="../Grafiken/verlauf.png" class="nav_logos"><span class="list_text">Verlauf</span></a></li>
+            <li><a href="#"><img src="../Grafiken/lesezeichen.png" class="nav_logos"><span class="list_text">&nbsp;&nbsp;&nbsp;Lesezeichen</span></a></li>
+            <li><a href="#"><img src="../Grafiken/settings.png" class="nav_logos"><span class="list_text">Settings</span></a></li>
+            <li><a href="#"><img src="../Grafiken/logout.png" class="nav_logos"><span class="list_text">Logout</span></a></li>
         </ul>
     </nav>
     <div class="wrap push">
@@ -89,12 +91,12 @@
             });
 
             // "Other script", can be in its own separate <script> and JS file.
-            var map = L.map('map').setView([51.047513, 13.760959], 14);
+            var map = L.map('map').setView([51.047513, 13.760959], 13);
 
             // Then retrieve the map object to further manipulate the map.
             var map = mapsPlaceholder.pop();
 
-            
+
 
             console.log(`${crd.latitude}`);
             console.log(`${crd.longitude}`);
@@ -110,7 +112,7 @@
             }).addTo(map);
 
 
-            var greenIcon = L.icon({
+            var myLocation = L.icon({
                 iconUrl: 'my_location.png',
                 //shadowUrl: 'leaf-shadow.png',
 
@@ -121,37 +123,60 @@
                 //popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
             });
 
+            var markers = L.icon({
+                iconUrl: 'here.png',
+                //shadowUrl: 'leaf-shadow.png',
+
+                iconSize: [30, 50], // size of the icon
+                //shadowSize: [50, 64], // size of the shadow
+                //iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+                //shadowAnchor: [4, 62], // the same for the shadow
+                //popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+            });
 
 
-            L.marker([51.052600, 13.746416]).addTo(map)
+
+            L.marker([51.052600, 13.746416], {
+                    icon: markers
+                }).addTo(map)
                 .bindPopup('Sempersynagoge, Neue Synagoge', {
                     autoClose: false
                 })
                 .openPopup();
 
-            L.marker([51.052094, 13.746435]).addTo(map)
+            L.marker([51.052094, 13.746435], {
+                    icon: markers
+                }).addTo(map)
                 .bindPopup('Gemeindezentrum')
                 .openPopup();
 
-            L.marker([51.045176, 13.775006]).addTo(map)
+            L.marker([51.045176, 13.775006], {
+                    icon: markers
+                }).addTo(map)
                 .bindPopup('Praxis von Dr. Katz', {
                     autoClose: false
                 })
                 .openPopup();
 
-            L.marker([51.046397, 13.741316]).addTo(map)
+            L.marker([51.046397, 13.741316], {
+                    icon: markers
+                }).addTo(map)
                 .bindPopup('Praxis Eugen Galewsky', {
                     autoClose: false
                 })
                 .openPopup();
 
-            L.marker([51.051844, 13.737964]).addTo(map)
+            L.marker([51.051844, 13.737964], {
+                    icon: markers
+                }).addTo(map)
                 .bindPopup('Triersches Haus<br>Tomche Nizrochim', {
                     autoClose: false
                 })
                 .openPopup();
 
-            L.marker([51.046319, 13.737300]).addTo(map)
+            L.marker([51.046319, 13.737300], {
+                    icon: markers
+                }).addTo(map)
                 .bindPopup('Bankhaus der Gebrüder Arnhold', {
                     autoClose: false
                 })
@@ -171,10 +196,12 @@
                 console.log(latlngi);
 
                 L.marker(latlngi, {
-                        icon: greenIcon
+                        icon: myLocation
                     }).addTo(map)
                     //.bindPopup("You are within " + radius + " meters from this point").openPopup();
-                    .bindPopup("mein Standort").openPopup();
+                    .bindPopup("mein Standort", {
+                    autoClose: true
+                }).openPopup();
 
                 //L.circle(latlngi, radius).addTo(map);
             }

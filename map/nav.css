@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background-color: #64a39f;
+    background-color: #abc7c4;
 }
 
 #map {
@@ -20,4 +20,59 @@ body {
 
 .wrap {
     position: relative;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: 20%;
+    margin-top:30px;
+}
+.logo{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.nav_logos{
+    position: relative;
+    top: 10px;
+}
+
+ul{
+    padding-top:40px;
+}
+
+li{
+    padding-top: 30px;
+    list-style-type: none;
+}
+
+.list_text{
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 120px;
+    color: #3C3C3C;
+    text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;
 }
