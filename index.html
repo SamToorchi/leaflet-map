@@ -1,157 +1,160 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <script src="js/jquery.js"></script>
-  <script src="js/itemslide.js"></script>
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <script src="js/jquery_mousewheel.js"></script>
-  <script src="js/main.js"></script>
-  <link rel="stylesheet" href="css/dots.css" type="text/css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.js"></script>
+    <script src="js/itemslide.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="js/jquery_mousewheel.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/dots.css" type="text/css" />
 </head>
 
 <body>
-  <div id="startpage">
-    <div class="centerized">
-      <div class="centerized_content">
-        <button class="center_button" onclick="start()">
-          <img src="Grafiken/logo.png"><br><br>
-          <img src="Grafiken/logo_text.png">
-        </button>
-      </div>
+    <div id="startpage">
+        <div class="centerized">
+            <div class="centerized_content">
+                <button class="center_button" onclick="start()">
+                    <img src="Grafiken/logo.png"><br><br>
+                    <img src="Grafiken/logo_text.png">
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
-  <div id="frame">
-    <ul style="touch-action: pan-y; user-select: none; width: 5670px; transform: translate3d(0px, 0px, 0px);">
-      <li class="itemslide-active">
-        <div class="grid-container-fist">
-          <div class="one">
-            <div class="img1"></div>
-          </div>
-          <div class="two">
-            <p><b>Get Started</b><br><br>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="grid-container-fist">
-          <div class="one">
-            <div class="img2"></div>
-          </div>
-          <div class="two">
-            <p><b>Willkommen in Dresden</b><br><br>
-              Es ist das Jahr 1925. Du besuchst deine Verwandten in Dresden. Weil ihr euch so lange nicht gesehen habt, sind sie sehr neugierig und stellen dir viele Fragen.</p>
-          </div>
-        </div>
-      </li>
+    <div id="frame">
+        <ul style="touch-action: pan-y; user-select: none; width: 5670px; transform: translate3d(0px, 0px, 0px);">
+            <li class="itemslide-active">
+                <div class="grid-container-fist">
+                    <div class="one">
+                        <div class="img1"></div>
+                    </div>
+                    <div class="two">
+                        <p><b>Get Started</b><br><br>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="grid-container-fist">
+                    <div class="one">
+                        <div class="img2"></div>
+                    </div>
+                    <div class="two">
+                        <p><b>Willkommen in Dresden</b><br><br>
+                            Es ist das Jahr 1925. Du besuchst deine Verwandten in Dresden. Weil ihr euch so lange nicht gesehen habt, sind sie sehr neugierig und stellen dir viele Fragen.</p>
+                    </div>
+                </div>
+            </li>
 
-      <li>
-        <div class="grid-container-third-one">
-          <div class="Imagetitel">
-            <div class="img3"></div>
-            <b class="quiztitel">Was möchtest du dir in Dresden gern anschauen?</b>
-            <div class="grid-container-third-two">
-              <div class="radio1"><input type="radio" name="anschauen" id="anschauen" value="r" onclick="results(this);"></div>
-              <div class="text_1"><label for="synagoge"> Die Synagoge</label></div>
-              <div class="radio2"><input type="radio" name="anschauen" id="anschauen" value="k" onclick="results(this);"></div>
-              <div class="text_2"><label for="zeitungsagentur"> Die Zeitungsagentur</label></div>
-              <div class="radio3"><input type="radio" name="anschauen" id="anschauen" value="jl" onclick="results(this);"></div>
-              <div class="text_3"><label for="kaufhaus"> Das Kaufhaus</label></div>
-            </div>
-          </div>
-        </div>
+            <li>
+                <div class="grid-container-third-one">
+                    <div class="Imagetitel">
+                        <div class="img3"></div>
+                        <b class="quiztitel">Was möchtest du dir in Dresden gern anschauen?</b>
+                        <div class="grid-container-third-two">
+                            <div class="radio1"><input type="radio" name="anschauen" id="anschauen" value="r" onclick="results(this);"></div>
+                            <div class="text_1"><label for="synagoge"> Die Synagoge</label></div>
+                            <div class="radio2"><input type="radio" name="anschauen" id="anschauen" value="k" onclick="results(this);"></div>
+                            <div class="text_2"><label for="zeitungsagentur"> Die Zeitungsagentur</label></div>
+                            <div class="radio3"><input type="radio" name="anschauen" id="anschauen" value="jl" onclick="results(this);"></div>
+                            <div class="text_3"><label for="kaufhaus"> Das Kaufhaus</label></div>
+                        </div>
+                    </div>
+                </div>
 
-      </li>
-      <li>
-        <div class="grid-container-third-one">
-          <div class="Imagetitel">
-            <div class="img3"></div>
-            <b class="quiztitel">Was machst du gern in deiner Freizeit?</b>
-            <div class="grid-container-third-two">
-              <div class="radio1"><input type="radio" id="chor" name="freizeit" value="r" onclick="results(this);"></div>
-              <div class="text_1"><label for="chor"> Du singst gern im Chor</label></div>
-              <div class="radio2"><input type="radio" id="lesen" name="freizeit" value="k" onclick="results(this);"></div>
-              <div class="text_2"><label for="lesen"> Du liest gern Bücher </label></div>
-              <div class="radio3"><input type="radio" id="technik" name="freizeit" value="jl" onclick="results(this);"></div>
-              <div class="text_3"><label for="technik"> Du bastelst gern an technischen Geräten herum</label></div>
-            </div>
-          </div>
-        </div>
+            </li>
+            <li>
+                <div class="grid-container-third-one">
+                    <div class="Imagetitel">
+                        <div class="img3"></div>
+                        <b class="quiztitel">Was machst du gern in deiner Freizeit?</b>
+                        <div class="grid-container-third-two">
+                            <div class="radio1"><input type="radio" id="chor" name="freizeit" value="r" onclick="results(this);"></div>
+                            <div class="text_1"><label for="chor"> Du singst gern im Chor</label></div>
+                            <div class="radio2"><input type="radio" id="lesen" name="freizeit" value="k" onclick="results(this);"></div>
+                            <div class="text_2"><label for="lesen"> Du liest gern Bücher </label></div>
+                            <div class="radio3"><input type="radio" id="technik" name="freizeit" value="jl" onclick="results(this);"></div>
+                            <div class="text_3"><label for="technik"> Du bastelst gern an technischen Geräten herum</label></div>
+                        </div>
+                    </div>
+                </div>
 
-      </li>
+            </li>
 
-      <li>
-        <div class="grid-container-third-one">
-          <div class="Imagetitel">
-            <div class="img3"></div>
-            <b class="quiztitel">Nun möchtest du auch etwas über deine Verwandten erfahren.<br><br>Wonach erkundigst du dich?</b>
-            <div class="grid-container-third-two">
-              <div class="radio1"><input type="radio" id="hochzeit" name="verwandten" value="r" onclick="results(this);"></div>
-              <div class="text_1"><label for="hochzeit"> Die Hochzeit deines Cousins</label></div>
-              <div class="radio2"><input type="radio" id="befoerderung" name="verwandten" value="jl" onclick="results(this);"></div>
-              <div class="text_2"><label for="befoerderung"> Die Beförderung deines Onkels</label></div>
-              <div class="radio3"><input type="radio" id="auszeichnung" name="verwandten" value="k" onclick="results(this);"></div>
-              <div class="text_3"><label for="auszeichnung"> Die Auszeichnung deiner Cousine bei einem Zeichenwettbewerb</label></div>
-            </div>
-          </div>
-        </div>
+            <li>
+                <div class="grid-container-third-one">
+                    <div class="Imagetitel">
+                        <div class="img3"></div>
+                        <b class="quiztitel">Nun möchtest du auch etwas über deine Verwandten erfahren.<br><br>Wonach erkundigst du dich?</b>
+                        <div class="grid-container-third-two">
+                            <div class="radio1"><input type="radio" id="hochzeit" name="verwandten" value="r" onclick="results(this);"></div>
+                            <div class="text_1"><label for="hochzeit"> Die Hochzeit deines Cousins</label></div>
+                            <div class="radio2"><input type="radio" id="befoerderung" name="verwandten" value="jl" onclick="results(this);"></div>
+                            <div class="text_2"><label for="befoerderung"> Die Beförderung deines Onkels</label></div>
+                            <div class="radio3"><input type="radio" id="auszeichnung" name="verwandten" value="k" onclick="results(this);"></div>
+                            <div class="text_3"><label for="auszeichnung"> Die Auszeichnung deiner Cousine bei einem Zeichenwettbewerb</label></div>
+                        </div>
+                    </div>
+                </div>
 
-      </li>
+            </li>
 
-      <li>
+            <li>
 
-        <div class="grid-container-fourth">
-          <div class="titel_span"><b>Ihr seid in der Wohnung deiner Verwandten angekommen und setzt euch ins Esszimmer. Dort fallen dir im Regal drei Gegenstände auf.<br><br>Welchen schaust du dir genauer an?</b></div>
-          <div class="logo_1">
-            <div class="img6"></div>
-            <div class="select_1"><input type="radio" id="regal" name="regal" value="k" onclick="results(this);"><br><label for="befoerderung"> Den Gedichtband</label></div>
-          </div>
-          <div class="logo_2">
-            <div class="img7"></div>
-            <div class="select_2"><input type="radio" id="regal" name="regal" value="r" onclick="results(this);"><br><label for="befoerderung"> Die Menora</label></div>
-          </div>
-          <div class="logo_3">
-            <div class="img8"></div>
-            <div class="select_3"><input type="radio" id="regal" name="regal" value="jl" onclick="results(this);"><br><label for="befoerderung"> Die Taschenuhr</label></div>
-          </div>
-        </div>
-      </li>
+                <div class="grid-container-fourth">
+                    <div class="titel_span"><b>Ihr seid in der Wohnung deiner Verwandten angekommen und setzt euch ins Esszimmer. Dort fallen dir im Regal drei Gegenstände auf.<br><br>Welchen schaust du dir genauer an?</b></div>
+                    <div class="logo_1">
+                        <div class="img6"></div>
+                        <div class="select_1"><input type="radio" id="regal" name="regal" value="k" onclick="results(this);"><br><label for="befoerderung"> Den Gedichtband</label></div>
+                    </div>
+                    <div class="logo_2">
+                        <div class="img7"></div>
+                        <div class="select_2"><input type="radio" id="regal" name="regal" value="r" onclick="results(this);"><br><label for="befoerderung"> Die Menora</label></div>
+                    </div>
+                    <div class="logo_3">
+                        <div class="img8"></div>
+                        <div class="select_3"><input type="radio" id="regal" name="regal" value="jl" onclick="results(this);"><br><label for="befoerderung"> Die Taschenuhr</label></div>
+                    </div>
+                </div>
+            </li>
 
-      <li id="removeIt">
-        <div class="grid-five">
-          <div class="Imagetitel">
-            <div class="img3"></div>
-            <b class="quiztitel" id="zusatzZero"></b>
-            <div class="grid-container-third-two">
-              <div class="radio1 "><input type="radio" name="zusatz" value="zusatz_1" onclick="" ></div>
-              <div class="text_1"><label id="zusatzOne" class="forremoving">test</label></div>
-              <div class="radio2"><input type="radio" name="zusatz" value="zusatz_2" onclick=""></div>
-              <div class="text_2"><label  id="zusatzTwo" class="forremoving">test</label></div>
-            </div>
-          </div>
-        </div>
+            <li id="removeIt">
+                <div class="grid-five">
+                    <div class="Imagetitel">
+                        <div class="img3"></div>
+                        <b class="quiztitel" id="zusatzZero"></b>
+                        <div class="grid-container-third-two">
+                            <div class="radio1 "><input type="radio" name="zusatz" value="zusatz_1" onclick=""></div>
+                            <div class="text_1"><label id="zusatzOne" class="forremoving">test</label></div>
+                            <div class="radio2"><input type="radio" name="zusatz" value="zusatz_2" onclick=""></div>
+                            <div class="text_2"><label id="zusatzTwo" class="forremoving">test</label></div>
+                        </div>
+                    </div>
+                </div>
 
-      </li>
-    </ul>
-  </div>
+            </li>
+            <li>
 
-  <div class="table">
-    <div class="cell">
-      <ul class="dots">
-        <li class="bullet 0 active"><a href="#">1</a></li>
-        <li class="bullet 1"><a href="#">2</a></li>
-        <li class="bullet 2"><a href="#">3</a></li>
-        <li class="bullet 3"><a href="#">4</a></li>
-        <li class="bullet 4"><a href="#">5</a></li>
-        <li class="bullet 5"><a href="#">6</a></li>
-        <li class="bullet 6" id="zusatzKreis""><a href="#">6</a></li>
-      </ul>
+                <a href="map/index_map.html">noch bearbeiten</a>
+            </li>
+        </ul>
     </div>
-  </div>
 
-  <script src="js/formular.js"></script>
-</body>
+    <div class="table">
+        <div class="cell">
+            <ul class="dots">
+                <li class="bullet 0 active"><a href="#">1</a></li>
+                <li class="bullet 1"><a href="#">2</a></li>
+                <li class="bullet 2"><a href="#">3</a></li>
+                <li class="bullet 3"><a href="#">4</a></li>
+                <li class="bullet 4"><a href="#">5</a></li>
+                <li class="bullet 5"><a href="#">6</a></li>
+                <li class="bullet 6" id="zusatzKreis"><a href="#">6</a></li>
+                <li class="bullet 7"><a href="#">7</a></li>
+            </ul>
+        </div>
+    </div>
 
-</html>
+    <script src="js/formular.js"></script>
+</body></html>
