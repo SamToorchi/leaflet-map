@@ -1,0 +1,23 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #64a39f;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+.panel {
+    position: fixed;
+    left: -15.625em;
+    /*left or right and the width of your navigation panel*/
+    width: 15.625em;
+    /*should match the above value*/
+}
+
+.wrap {
+    position: relative;
+}
