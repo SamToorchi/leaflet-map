@@ -20,7 +20,7 @@ body {
 }
 
 .wrap {
-    position: relative;
+    position: fixed;
 }
 
 .avatar {
