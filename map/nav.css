@@ -3,6 +3,7 @@ body {
     height: 100%;
     margin: 0;
     background-color: #abc7c4;
+    font-family: 'Poppins', sans-serif;
 }
 
 #map {
@@ -56,6 +57,14 @@ li{
     margin-bottom: 120px;
     color: #3C3C3C;
     text-decoration: none;
+}
+
+.small_avatar{
+    position: fixed;
+    right:10px;
+    top:2px;
+    width: 40px;
+    height: 40px;
 }
 
 a:link {
