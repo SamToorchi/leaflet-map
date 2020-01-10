@@ -4,6 +4,7 @@ body {
     margin: 0;
     background-color: #abc7c4;
     font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
 }
 
 #map {
@@ -20,7 +21,8 @@ body {
 }
 
 .wrap {
-    position: fixed;
+    position: relative;
+    overflow: auto;
 }
 
 .avatar {
