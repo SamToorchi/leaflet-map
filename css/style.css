@@ -1,266 +1,326 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 #frame {
-  position: fixed;
-  height: 100vh;
-  /*150vh*/
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    position: fixed;
+    height: 100vh;
+    /*150vh*/
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 0;
-  height: 100vh;
-  list-style-type: none;
-  -webkit-transform-style: preserve-3d;
-  /*YAY lag is fixed on firefox*/
-  -ms-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    list-style-type: none;
+    -webkit-transform-style: preserve-3d;
+    /*YAY lag is fixed on firefox*/
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  float: left;
-  width: 100vw;
-  height: 100%;
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    width: 100vw;
+    height: 100%;
+    text-align: center;
 }
 
 #startpage {
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
 }
 
 .centerized {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .centerized_content {
-  display: block;
-  width: 108px;
-  /* Here is the important code*/
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    display: block;
+    width: 108px;
+    /* Here is the important code*/
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 button {
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }
 
 .grid-container-fist {
-  min-width: 350px;
-  max-width: 90%;
-  min-height: 90vh;
-  max-height: 90%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  display: inline-grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "one" "two";
+    min-width: 350px;
+    max-width: 90%;
+    min-height: 90vh;
+    max-height: 90%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "one""two";
 
-  justify-items: center;
+    justify-items: center;
 }
 
 .grid-container-third-one {
-  min-width: 350px;
-  max-width: 90%;
-  min-height: 90vh;
-  max-height: 90%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "Imagetitel Imagetitel" "radio1 text1" "radio2 text2" "radio3 text3";
+    min-width: 350px;
+    max-width: 90%;
+    min-height: 90vh;
+    max-height: 90%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "Imagetitel Imagetitel""radio1 text1""radio2 text2""radio3 text3";
 
-  justify-items: center;
+    justify-items: center;
 }
 
 .grid-container-third-two {
-  min-width: 350px;
-  max-width: 90%;
-  min-height: 20vh;
-  max-height: 50%;
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "radio1 text_1" "radio2 text_2" "radio3 text_3";
+    min-width: 350px;
+    max-width: 90%;
+    min-height: 20vh;
+    max-height: 50%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "radio1 text_1""radio2 text_2""radio3 text_3";
 
 }
 
 .grid-container-fourth {
-  min-width: 350px;
-  max-width: 90%;
-  min-height: 90vh;
-  max-height: 90%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 1.5fr;
-  grid-template-areas: "titel_span titel_span titel_span""logo_1 logo_2 logo_3" "select_1 select_2 select_3";
+    min-width: 350px;
+    max-width: 90%;
+    min-height: 90vh;
+    max-height: 90%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1.5fr;
+    grid-template-areas: "titel_span titel_span titel_span""logo_1 logo_2 logo_3""select_1 select_2 select_3";
 
 }
 
-.logo_1 { grid-area: logo_1;    }
-
-.logo_2 { grid-area: logo_2;    }
-
-.logo_3 { grid-area: logo_3;    }
-
-.select_1 { grid-area: select_1;     font-size: 1.5vh;}
-
-.select_2 { grid-area: select_2;     font-size: 1.5vh;}
-
-.select_3 { grid-area: select_3;     font-size: 1.5vh;}
-
-.titel_span{ grid-area: titel_span;   font-size: 2vh;}
-
-
-
-.radio1 { grid-area: radio1; text-align: right;    padding-right: 15px; padding-top:5px; }
-
-.text_1 { grid-area: text_1; justify-items: left; text-align: left;      font-size:1.8vh;  }
-
-.radio2 { grid-area: radio2; text-align: right;    padding-right: 15px; padding-top:5px; }
-
-.text_2 { grid-area: text_2; justify-items: left; text-align: left;      font-size:1.8vh;}
-
-.radio3 { grid-area: radio3; text-align: right;    padding-right: 15px; padding-top:5px; }
-
-.text_3 { grid-area: text_3; justify-items: left; text-align: left;      font-size:1.8vh;  }
-
-
-
-.Imagetitel { grid-area: Imagetitel;
-
-  min-width: auto;
-  overflow: visible;
+.logo_1 {
+    grid-area: logo_1;
 }
 
-.quiztitel{
-  font-size:1.8vh;
+.logo_2 {
+    grid-area: logo_2;
+}
+
+.logo_3 {
+    grid-area: logo_3;
+}
+
+.select_1 {
+    grid-area: select_1;
+    font-size: 1.5vh;
+}
+
+.select_2 {
+    grid-area: select_2;
+    font-size: 1.5vh;
+}
+
+.select_3 {
+    grid-area: select_3;
+    font-size: 1.5vh;
+}
+
+.titel_span {
+    grid-area: titel_span;
+    font-size: 2vh;
+}
+
+
+
+.radio1 {
+    grid-area: radio1;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.text_1 {
+    grid-area: text_1;
+    justify-items: left;
+    text-align: left;
+    font-size: 1.8vh;
+}
+
+.radio2 {
+    grid-area: radio2;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.text_2 {
+    grid-area: text_2;
+    justify-items: left;
+    text-align: left;
+    font-size: 1.8vh;
+}
+
+.radio3 {
+    grid-area: radio3;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.text_3 {
+    grid-area: text_3;
+    justify-items: left;
+    text-align: left;
+    font-size: 1.8vh;
+}
+
+
+
+.Imagetitel {
+    grid-area: Imagetitel;
+
+    min-width: auto;
+    overflow: visible;
+}
+
+.quiztitel {
+    font-size: 1.8vh;
 }
 
 .one {
-  grid-area: one;
+    grid-area: one;
 
-  min-width: auto;
-  overflow: visible;
+    min-width: auto;
+    overflow: visible;
 }
 
 .two {
-  grid-area: two;
+    grid-area: two;
 
-  font-size:2vh;
-  min-height: auto;
-  overflow: visible;
-}
-
-.img1{
-  background-image: url('../Grafiken/Frauenkirche.svg');
-  background-position: center center;
-  background-size: cover cover;
-  background-repeat: no-repeat;
-  width: 60vw;
-  height: 50vh;
+    font-size: 2vh;
+    min-height: auto;
+    overflow: visible;
 }
 
-.img2{
-  background-image: url('../Grafiken/Dampflok.svg');
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 60vw;
-  height: 50vh;
+.img1 {
+    background-image: url('../Grafiken/Frauenkirche.svg');
+    background-position: center center;
+    background-size: cover cover;
+    background-repeat: no-repeat;
+    width: 60vw;
+    height: 50vh;
 }
 
-.img3{
-  background-image: url('../Grafiken/Paper_Map.svg');
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 50vw;
-  height: 50vh;
-  padding-left:25vw;
+.img2 {
+    background-image: url('../Grafiken/Dampflok.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60vw;
+    height: 50vh;
 }
 
-.img6{
-  background-image: url('../Grafiken/Paper_Map.svg');
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 40vh;
-}
-.img7{
-  background-image: url('../Grafiken/Paper_Map.svg');
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 40vh;
-}
-.img8{
-  background-image: url('../Grafiken/Paper_Map.svg');
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 40vh;
+.img3 {
+    background-image: url('../Grafiken/Paper_Map.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50vw;
+    height: 50vh;
+    padding-left: 25vw;
 }
 
-input[type="radio"]{
-  transform: scale(1.1);
+.img6 {
+    background-image: url('../Grafiken/Paper_Map.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img7 {
+    background-image: url('../Grafiken/Paper_Map.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img8 {
+    background-image: url('../Grafiken/Paper_Map.svg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+input[type="radio"] {
+    transform: scale(1.1);
 }
 
 /* Zusatzblatt */
 .grid-five {
-  min-width: 350px;
-  max-width: 90%;
-  min-height: 90vh;
-  max-height: 90%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "Imagetitel Imagetitel" "radio1 text1" "radio2 text2" "radio3 text3";
-  justify-items: center;
+    min-width: 350px;
+    max-width: 90%;
+    min-height: 90vh;
+    max-height: 90%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "Imagetitel Imagetitel""radio1 text1""radio2 text2""radio3 text3";
+    justify-items: center;
 }
 
-#zusatzKreis{
-  visibility: hidden;
+#zusatzKreis {
+    visibility: hidden;
+}
+
+.lastpage {
+    background-color: #abc7c4;
+    background-image: url("../Grafiken/lastpage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }

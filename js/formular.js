@@ -113,7 +113,7 @@ function results(myRadio) {
         console.log("remove first");
         //document.getElementById("removeIt").style.backgroundColor = "rgb(171,199,196)";
         //document.getElementById("removeIt").innerHTML = '';
-        document.getElementById("removeIt").style.background = "#abc7c4 url(Grafiken/img_avatar.png) no-repeat center";
+        document.getElementById("removeIt").style.background = "#abc7c4 url(Grafiken/lastpage.png) no-repeat center";
         document.getElementsByClassName("grid-five")[0].style.visibility = "hidden";
     }
 
