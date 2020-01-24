@@ -21,7 +21,7 @@ body {
 }
 
 .wrap {
-    position: relative;
+    position: fixed;
     overflow: auto;
 }
 
