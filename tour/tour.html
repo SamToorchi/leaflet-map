@@ -34,6 +34,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
     <script id="script-libraries" type="text/javascript">
+        localStorage.clear();
+        sessionStorage.clear();
         if (document.head && document.addEventListener && document.querySelector && Object.create && Object.freeze && JSON) {
             document.documentElement.setAttribute("data-init", "loading");
             /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
