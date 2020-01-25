@@ -87,3 +87,10 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+
+#notification{
+    visibility: hidden;
+    position: fixed;
+    top:30%;
+    left:15%;
+}
