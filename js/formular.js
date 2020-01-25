@@ -1,3 +1,9 @@
+function rotation() {
+    if (window.innerHeight < window.innerWidth) {
+        alert("Bitte drehen Sie Ihr Gerät um!");
+    }
+}
+
 var currentValueFirst = 0;
 
 function handleClickFirstForm(myRadio) {
@@ -134,3 +140,5 @@ function removeTextNodes() {
     document.getElementById("zusatzOne").innerHTML = "";
     document.getElementById("zusatzTwo").innerHTML = "";
 }
+
+rotation();
