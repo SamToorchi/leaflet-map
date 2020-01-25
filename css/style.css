@@ -198,7 +198,7 @@ button {
     grid-area: radio3;
     text-align: right;
     padding-right: 35px;
-    padding-top: 15px;
+    padding-top: 5px;
 }
 
 .text_3 {
@@ -219,6 +219,8 @@ button {
 
 .quiztitel {
     font-size: 1.8vh;
+    position: relative;
+    bottom: 45px;
 }
 
 .one {
