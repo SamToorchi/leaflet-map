@@ -102,6 +102,7 @@ button {
     grid-template-areas: "Imagetitel Imagetitel""radio1 text1""radio2 text2""radio3 text3";
 
     justify-items: center;
+    transform: translateY(-120px);
 }
 
 .grid-container-third-two {
