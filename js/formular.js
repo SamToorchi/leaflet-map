@@ -111,13 +111,12 @@ function results(myRadio) {
     } else {
         document.getElementById("zusatzKreis").style.visibility = "hidden";
         console.log("remove first");
-        //document.getElementById("removeIt").style.backgroundColor = "rgb(171,199,196)";
-        //document.getElementById("removeIt").innerHTML = '';
         document.getElementById("removeIt").style.background = "#abc7c4 url(Grafiken/lastpage.png) no-repeat center";
         document.getElementsByClassName("grid-five")[0].style.visibility = "hidden";
+        document.getElementById("removeIt").onclick = function () {
+            location.href = "map/index_map.html";
+        };
     }
-
-
 }
 
 function countInArray(array, what) {
