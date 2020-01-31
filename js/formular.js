@@ -12,6 +12,7 @@ function handleClickFirstForm(myRadio) {
     return currentValueFirst;
 }
 
+
 function results(myRadio) {
     var results = [];
     if (myRadio.name == "anschauen") {
@@ -33,13 +34,31 @@ function results(myRadio) {
         res_4 = currentValueFirst;
     }
 
+    if (myRadio.name == "zusatz") {
+        handleClickFirstForm(myRadio);
+        res_5 = currentValueFirst;
+        console.log(res_5);
+    }
+
     results = [res_1, res_2, res_3, res_4];
+
+    var zusatz_id;
+
+    if (typeof res_5 === "undefined") {
+        zusatz_id = "zusatz_1";
+    } else {
+        zusatz_id = res_5;
+    }
+
+
+
 
 
     console.log(results);
     var count_r = countInArray(results, "r");
     var count_k = countInArray(results, "k");
     var count_jl = countInArray(results, "jl");
+
 
     if (count_r && count_k > 1) {
         document.getElementById("removeIt").style.background = "#ffffff";
@@ -66,6 +85,13 @@ function results(myRadio) {
 
         document.getElementById("removeIt").style.visibility = "visible";
 
+        if (zusatz_id == "zusatz_1") {
+            document.getElementById("changeBackgroundImage").className = "lastpage_j";
+
+        } else {
+            document.getElementById("changeBackgroundImage").className = "lastpage_a";
+        }
+
     } else if (count_r && count_jl > 1) {
         document.getElementById("removeIt").style.background = "#ffffff";
         document.getElementsByClassName("grid-five")[0].style.visibility = "visible";
@@ -90,6 +116,12 @@ function results(myRadio) {
 
         document.getElementById("removeIt").style.visibility = "visible";
 
+        if (zusatz_id == "zusatz_1") {
+            document.getElementById("changeBackgroundImage").className = "lastpage_j";
+        } else {
+            document.getElementById("changeBackgroundImage").className = "lastpage";
+        }
+
     } else if (count_k && count_jl > 1) {
         document.getElementById("removeIt").style.background = "#ffffff";
         document.getElementsByClassName("grid-five")[0].style.visibility = "visible";
@@ -113,15 +145,45 @@ function results(myRadio) {
         paragraphTwo.appendChild(textTwo);
 
         document.getElementById("removeIt").style.visibility = "visible";
+        if (zusatz_id == "zusatz_1") {
+            document.getElementById("changeBackgroundImage").className = "lastpage_a";
+        } else {
+            document.getElementById("changeBackgroundImage").className = "lastpage";
+        }
 
     } else {
         document.getElementById("zusatzKreis").style.visibility = "hidden";
         console.log("remove first");
+        if (count_r > 1) {
+            document.getElementById("removeIt").style.background = "#abc7c4 url(Grafiken/lastpage_j.png) no-repeat center";
+            document.getElementsByClassName("grid-five")[0].style.visibility = "hidden";
+            document.getElementById("removeIt").onclick = function () {
+                location.href = "map/index_map.html?var=" + "r";
+            };
+        }
+        if (count_k > 1) {
+            document.getElementById("removeIt").style.background = "#abc7c4 url(Grafiken/lastpage_a.png) no-repeat center";
+            document.getElementsByClassName("grid-five")[0].style.visibility = "hidden";
+            document.getElementById("removeIt").onclick = function () {
+                location.href = "map/index_map.html?var=" + "k";
+            };
+        }
+        if (count_jl > 1) {
+            document.getElementById("removeIt").style.background = "#abc7c4 url(Grafiken/lastpage.png) no-repeat center";
+            document.getElementsByClassName("grid-five")[0].style.visibility = "hidden";
+            document.getElementById("removeIt").onclick = function () {
+                location.href = "map/index_map.html?var=" + "jl" ;
+            };
+        }
+
+
+        /*
         document.getElementById("removeIt").style.background = "#abc7c4 url(Grafiken/lastpage.png) no-repeat center";
         document.getElementsByClassName("grid-five")[0].style.visibility = "hidden";
         document.getElementById("removeIt").onclick = function () {
             location.href = "map/index_map.html";
         };
+        */
     }
 }
 

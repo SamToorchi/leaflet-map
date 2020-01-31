@@ -328,6 +328,24 @@ input[type="radio"] {
     height: 100vh;
 }
 
+.lastpage_a {
+    background-color: #abc7c4;
+    background-image: url("../Grafiken/lastpage_a.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.lastpage_j {
+    background-color: #abc7c4;
+    background-image: url("../Grafiken/lastpage_j.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
 #regal{
     position: relative;
     bottom: 35px;
